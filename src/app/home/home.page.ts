@@ -19,10 +19,10 @@ export class HomePage {
   isDatePickerOpen: boolean = false;
 
   constructor() {
-    // Set minDate today and maxDate to 5 years from today
+    // Set minDate to tomorrow and maxDate to 5 years from today
     const currentDate = new Date();
     const minDate = new Date(currentDate);
-    minDate.setDate(currentDate.getDate());
+    minDate.setDate(currentDate.getDate() + 1);
     const maxDate = new Date(currentDate);
     maxDate.setFullYear(currentDate.getFullYear() + 5); // 5 years from now
 
